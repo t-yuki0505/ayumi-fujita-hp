@@ -87,4 +87,52 @@
     });
   }
 
+  // ─── Work image modal ───────────────────────────────────
+  const workModal = document.querySelector('[data-work-modal]');
+  const workModalImg = document.querySelector('[data-work-modal-img]');
+  const workModalCaption = document.querySelector('[data-work-modal-caption]');
+
+  function openWorkModal(img) {
+    if (!workModal || !workModalImg || !img) return;
+    workModalImg.src = img.currentSrc || img.src;
+    workModalImg.alt = img.alt || '';
+    if (workModalCaption) workModalCaption.textContent = img.alt || '';
+    workModal.classList.add('is-open');
+    workModal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    const closeBtn = workModal.querySelector('[data-work-modal-close]');
+    if (closeBtn) closeBtn.focus();
+  }
+
+  function closeWorkModal() {
+    if (!workModal || !workModalImg) return;
+    workModal.classList.remove('is-open');
+    workModal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    workModalImg.removeAttribute('src');
+  }
+
+  if (worksGrid && workModal) {
+    worksGrid.querySelectorAll('.work-card .ph img').forEach(function (img) {
+      const frame = img.closest('.ph');
+      if (!frame) return;
+      frame.setAttribute('role', 'button');
+      frame.setAttribute('tabindex', '0');
+      frame.setAttribute('aria-label', '画像を拡大表示: ' + (img.alt || '作品画像'));
+      frame.addEventListener('click', function () { openWorkModal(img); });
+      frame.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          openWorkModal(img);
+        }
+      });
+    });
+    workModal.querySelectorAll('[data-work-modal-close]').forEach(function (el) {
+      el.addEventListener('click', closeWorkModal);
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && workModal.classList.contains('is-open')) closeWorkModal();
+    });
+  }
+
 })();
