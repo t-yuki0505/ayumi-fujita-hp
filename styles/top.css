@@ -270,3 +270,21 @@
   .services__list li .svc-body { grid-column: 1 / -1; }
   .clients-teaser__row { gap: 16px 28px; padding: 22px 0; }
 }
+/* Mobile copy tuning */
+@media (max-width: 760px) {
+  .intro__copy {
+    max-width: 19em;
+  }
+
+  .intro__copy p {
+    font-size: 18px;
+    line-height: 1.95;
+    letter-spacing: 0.04em;
+    text-wrap: balance;
+  }
+
+  .intro__copy .intro__sub {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+}

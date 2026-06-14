@@ -173,3 +173,55 @@
   .work-modal { padding: 14px; }
   .work-modal__figure img { max-height: 74vh; }
 }
+/* Mobile work-card rhythm */
+@media (max-width: 760px) {
+  .works__grid {
+    gap: 34px 22px;
+  }
+
+  .works .work-card {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+  }
+
+  .works .work-card__meta {
+    display: grid;
+    grid-template-rows: minmax(4.9em, auto) 2.8em auto;
+    gap: 6px;
+    margin-top: 12px;
+  }
+
+  .works .work-card__meta .jp {
+    display: -webkit-box;
+    min-height: 4.9em;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    font-size: 16px;
+    line-height: 1.6;
+    letter-spacing: 0.05em;
+  }
+
+  .works .work-card__meta .en {
+    min-height: 2.8em;
+    font-size: 11px;
+    line-height: 1.45;
+    letter-spacing: 0.12em;
+  }
+
+  .works .work-card__desc {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    margin-top: 2px;
+    font-size: 12px;
+    line-height: 1.65;
+    letter-spacing: 0.035em;
+  }
+
+  .clients {
+    margin-top: 84px;
+  }
+}

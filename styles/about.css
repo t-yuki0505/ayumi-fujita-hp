@@ -108,3 +108,36 @@
   grid-column: 7 / 13;
   margin-top: 40px;
 }
+/* Mobile readability pass */
+.no-wrap { white-space: nowrap; }
+@media (max-width: 760px) {
+  .about-hero .hero__subtitle {
+    max-width: 16em;
+    font-size: 16px;
+    line-height: 1.8;
+    letter-spacing: 0.05em;
+  }
+
+  .bio {
+    margin-top: 40px;
+    gap: 34px;
+  }
+
+  .bio__copy p {
+    font-size: 15px;
+    line-height: 1.9;
+    letter-spacing: 0.045em;
+    margin-bottom: 16px;
+  }
+
+  .bio__copy br {
+    display: none;
+  }
+
+  .profile__row dd,
+  .timeline__list p {
+    font-size: 14px;
+    line-height: 1.7;
+    letter-spacing: 0.04em;
+  }
+}
