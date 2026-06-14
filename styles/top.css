@@ -1,0 +1,272 @@
+/* ───────────── Top page ───────────── */
+
+/* ─── Editorial Hero (Top page only) ─────────────────────────── */
+.hero--editorial {
+  position: relative;
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 48px var(--gutter) 80px;
+  display: grid;
+  grid-template-columns: 6fr 5fr;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    "title  visual"
+    "bottom visual";
+  column-gap: clamp(0px, 1.5vw, 20px);
+  row-gap: clamp(32px, 5vw, 72px);
+  min-height: clamp(640px, 86vh, 1040px);
+  align-items: stretch;
+}
+.hero--editorial .hero__title-block {
+  grid-area: title;
+  align-self: start;
+  position: relative;
+  z-index: 10;
+  /* タイトルを写真列まで食み出させる */
+  width: calc(100% + clamp(56px, 8vw, 120px));
+}
+.hero--editorial .hero__title {
+  font-family: "Italiana", serif;
+  font-size: clamp(96px, 15.5vw, 232px);
+  font-weight: 400;
+  font-style: normal;
+  line-height: 0.92;
+  letter-spacing: 0.005em;
+  color: var(--ink);
+  margin: 0;
+}
+.hero--editorial .hero__title span {
+  display: block;
+}
+.hero--editorial .hero__title span:nth-child(2) {
+  margin-top: -0.06em;
+  margin-left: 0.04em;
+}
+.hero--editorial .hero__visual {
+  grid-area: visual;
+  display: flex;
+  align-items: stretch;
+  min-height: 520px;
+  position: relative;
+  z-index: 1; /* タイトルテキストの後ろ */
+}
+.hero--editorial .hero__media {
+  flex: 1;
+  position: relative;
+}
+.hero--editorial .hero__media .ph {
+  width: 100%;
+  height: 100%;
+}
+.hero--editorial .hero__side {
+  display: none; /* デスクトップ・モバイルともに非表示 */
+}
+.hero--editorial .hero__bottom {
+  grid-area: bottom;
+  align-self: end;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  max-width: 460px;
+}
+.hero--editorial .hero__tagline {
+  font-family: var(--serif-en);
+  font-size: clamp(15px, 1.3vw, 18px);
+  font-style: normal;
+  line-height: 1.7;
+  letter-spacing: 0.01em;
+  color: var(--ink-soft);
+  margin: 0;
+}
+.hero--editorial .hero__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+  font-family: var(--serif-en);
+  font-size: 12px;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--ink);
+  align-self: flex-start;
+}
+.hero--editorial .hero__cta-line {
+  display: inline-block;
+  width: 88px;
+  height: 1px;
+  background: var(--ink);
+  transition: width .35s ease;
+}
+.hero--editorial .hero__cta:hover .hero__cta-line {
+  width: 132px;
+}
+
+/* intro block */
+.intro {
+  margin-top: clamp(44px, 7vh, 88px);
+  text-align: center;
+}
+.intro__copy {
+  max-width: 640px;
+  margin: 0 auto;
+}
+.intro__copy p {
+  font-family: var(--serif-jp);
+  font-size: clamp(17px, 1.6vw, 21px);
+  letter-spacing: 0.06em;
+  line-height: 2.1;
+  margin: 0 0 18px;
+  color: var(--ink);
+}
+.intro__copy .intro__sub {
+  color: var(--ink-mute);
+  font-size: clamp(14px, 1.3vw, 17px);
+}
+
+/* selected works */
+.selected { margin-top: 120px; }
+.selected__grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px;
+}
+.work-card { display: block; }
+.work-card .ph { aspect-ratio: 4/3; transition: transform .8s cubic-bezier(.2,.6,.2,1); }
+.work-card:hover .ph { transform: translateY(-4px); }
+.work-card__meta {
+  margin-top: 16px;
+  display: flex; flex-direction: column; gap: 4px;
+}
+.work-card__meta .jp { font-family: var(--serif-jp); font-size: 14px; letter-spacing: 0.14em; }
+.work-card__meta .en { font-family: var(--serif-en); font-size: 11px; letter-spacing: 0.28em; color: var(--ink-mute); }
+
+/* philosophy teaser */
+.phil-teaser {
+  margin-top: 140px;
+  display: grid; grid-template-columns: 7fr 5fr;
+  gap: clamp(24px, 6vw, 100px);
+  align-items: center;
+}
+.phil-teaser__copy h2 {
+  font-family: var(--serif-jp);
+  font-size: clamp(22px, 2.6vw, 32px);
+  font-weight: 300;
+  line-height: 1.9;
+  letter-spacing: 0.06em;
+  margin: 18px 0 28px;
+}
+.phil-teaser__copy h2 em {
+  font-style: normal;
+  position: relative;
+  background: linear-gradient(transparent 70%, color-mix(in srgb, var(--accent-soft) 70%, transparent) 70%);
+  padding: 0 0.1em;
+}
+.phil-teaser__body {
+  font-size: 15px; letter-spacing: 0.06em; line-height: 2.1; color: var(--ink);
+  margin: 0 0 28px;
+}
+.text-link {
+  display: inline-flex; align-items: center; gap: 14px;
+  font-family: var(--serif-en);
+  font-size: 12px; letter-spacing: 0.32em;
+  border-bottom: 1px solid var(--ink);
+  padding-bottom: 6px;
+  transition: gap .3s ease;
+}
+.text-link:hover { gap: 22px; }
+.phil-teaser__media .ph { aspect-ratio: 3/4; }
+
+/* clients teaser on TOP */
+.clients-teaser { margin-top: 120px; }
+.clients-teaser__row {
+  display: flex; flex-wrap: wrap;
+  gap: clamp(20px, 3vw, 48px) clamp(28px, 5vw, 72px);
+  border-top: 0.5px solid var(--line);
+  border-bottom: 0.5px solid var(--line);
+  padding: 36px 0;
+  align-items: center; justify-content: center;
+}
+.clients-teaser__row .en {
+  font-family: var(--serif-display);
+  font-size: clamp(18px, 2vw, 24px);
+  letter-spacing: 0.08em;
+  color: var(--ink-soft);
+}
+
+.services__list { list-style: none; padding: 0; margin: 0; border-top: 0.5px solid var(--line); }
+.services__list li {
+  display: grid;
+  grid-template-columns: 80px 1fr 2fr;
+  align-items: baseline;
+  padding: 32px 0;
+  border-bottom: 0.5px solid var(--line);
+  gap: 24px;
+}
+.services__list .num {
+  font-family: var(--serif-display); font-size: 20px; color: var(--ink-mute);
+  letter-spacing: 0.04em;
+}
+.svc-main { display: flex; flex-direction: column; gap: 6px; }
+.svc-en { font-size: 13px; letter-spacing: 0.32em; color: var(--ink-mute); }
+.svc-jp {
+  font-family: var(--serif-jp);
+  font-size: clamp(20px, 2vw, 26px);
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  color: var(--ink);
+}
+.svc-body {
+  font-size: 14px; letter-spacing: 0.06em; line-height: 1.95; color: var(--ink-soft);
+  margin: 0;
+}
+
+/* ─── Mobile ─────────────────────────────────── */
+@media (max-width: 760px) {
+  .hero--editorial {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding: 16px var(--gutter) 56px;
+    min-height: auto;
+  }
+  .hero--editorial .hero__title {
+    font-size: clamp(88px, 24vw, 130px);
+    line-height: 0.93;
+    margin-top: 8px;
+  }
+  .hero--editorial .hero__title span:nth-child(2) {
+    margin-left: 0.06em;
+    margin-top: -0.04em;
+  }
+  .hero--editorial .hero__title-block {
+    width: auto; /* デスクトップの幅拡張を解除 */
+    margin-bottom: calc(-1 * clamp(44px, 12vw, 72px)); /* 写真に被せる */
+  }
+  .hero--editorial .hero__visual {
+    min-height: 0;
+    margin-bottom: 36px; /* 写真とタグラインの間隔 */
+  }
+  .hero--editorial .hero__media {
+    flex: none;
+    width: 100%;
+    aspect-ratio: 3 / 4;
+  }
+  .hero--editorial .hero__side {
+    display: none;
+  }
+  .hero--editorial .hero__bottom {
+    max-width: 100%;
+    gap: 22px;
+  }
+  .hero--editorial .hero__tagline {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+  .hero--editorial .hero__cta-line { width: 64px; }
+
+  .intro { margin-top: 40px; }
+  .intro__copy br { display: none; } /* スマホでは自然な折り返しに任せる */
+  .selected__grid { grid-template-columns: 1fr; gap: 28px; }
+  .phil-teaser { grid-template-columns: 1fr; margin-top: 80px; }
+  .services { margin-top: 80px; }
+  .services__list li { grid-template-columns: 60px 1fr; gap: 12px 16px; }
+  .services__list li .svc-body { grid-column: 1 / -1; }
+  .clients-teaser__row { gap: 16px 28px; padding: 22px 0; }
+}

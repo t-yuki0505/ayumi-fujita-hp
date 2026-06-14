@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="icon" type="image/png" href="images/logo.png" />
+  <link rel="apple-touch-icon" href="images/logo.png" />
+
+    <title>News | フラワーアーティスト 藤田あゆみ (ayumi fujita)</title>
+  <meta name="description" content="フラワーアーティスト 藤田あゆみのお知らせ。イベント出演・展示会・メディア掲載など最新情報をお届けします。" />
+  <meta name="author" content="藤田あゆみ Ayumi Fujita" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://ayumi-fujita.netlify.app/news.html" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Italiana&family=Noto+Sans+JP:wght@300;400;500&family=Noto+Serif+JP:wght@200;300;400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles/globals.css" />
+  <link rel="stylesheet" href="styles/news-page.css" />
+  <link rel="stylesheet" href="styles/news.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="brand" href="index.html" aria-label="Ayumi Fujita ホーム">
+      <img src="images/logo2.png" alt="" class="brand__mark" />
+      <span class="brand__text-desktop">
+        <span class="brand__text-en">FLORAL ARTIST</span>
+        <span class="brand__text-est">EST. 2018</span>
+      </span>
+      <span class="brand__text-mobile">AYUMI FUJITA</span>
+    </a>
+    <nav class="nav">
+      <a href="index.html">TOP</a>
+      <a href="about.html">ABOUT</a>
+      <a href="work.html">WORK</a>
+      <a href="contact.html">CONTACT</a>
+    </nav>
+    <button type="button" class="menu-btn" aria-label="MENU" data-menu-open>
+      <span class="menu-btn__bars" aria-hidden="true"><span></span><span></span></span>
+    </button>
+  </div>
+</header>
+
+<div class="mobile-menu" aria-hidden="true" data-menu>
+  <button type="button" class="mobile-menu__close" aria-label="close" data-menu-close>×</button>
+  <div class="mobile-menu__inner">
+    <p class="eyebrow">— Menu —</p>
+    <ul>
+      <li><a href="index.html"><span class="en">TOP</span><span class="jp lang-jp">ホーム</span></a></li>
+      <li><a href="about.html"><span class="en">ABOUT</span><span class="jp lang-jp">プロフィール</span></a></li>
+      <li><a href="work.html"><span class="en">WORK</span><span class="jp lang-jp">活動実績</span></a></li>
+      <li><a href="contact.html"><span class="en">CONTACT</span><span class="jp lang-jp">お問い合わせ</span></a></li>
+    </ul>
+    <a class="mobile-menu__ig" href="https://www.instagram.com/ayumi_fujita_design/" target="_blank" rel="noopener noreferrer">INSTAGRAM ↗</a>
+  </div>
+</div>
+
+<main>
+
+  <section class="news-page-hero shell">
+    <p class="eyebrow">News</p>
+    <h1>お知らせ</h1>
+  </section>
+
+  <section class="news news--all shell reveal">
+    <ul class="news__list" id="js-news-list">
+      <li class="news__state lang-jp">読み込み中…</li>
+    </ul>
+  </section>
+
+</main>
+
+<!-- NEWS MODAL -->
+<div class="news-modal" aria-hidden="true" data-news-modal>
+  <div class="news-modal__overlay" data-news-modal-close></div>
+  <div class="news-modal__panel" role="dialog" aria-modal="true" aria-labelledby="js-modal-title">
+    <button type="button" class="news-modal__close" aria-label="閉じる" data-news-modal-close>×</button>
+    <div class="news-modal__img-wrap" id="js-modal-img-wrap">
+      <div class="ph ph--has-img">
+        <img id="js-modal-img" src="" alt="" loading="lazy" />
+      </div>
+    </div>
+    <div class="news-modal__body">
+      <div class="news-modal__meta">
+        <span class="news-modal__cat en" id="js-modal-cat"></span>
+        <span class="news-modal__date en" id="js-modal-date"></span>
+      </div>
+      <h2 class="news-modal__title" id="js-modal-title"></h2>
+      <p class="news-modal__text" id="js-modal-text"></p>
+      <a class="news-modal__link btn-pill" id="js-modal-link" href="#" target="_blank" rel="noopener noreferrer" style="display:none">
+        <span>詳細を見る</span>
+        <span class="arrow">↗</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <a class="brand" href="index.html" style="font-size:18px"><span>ayumi fujita</span></a>
+    <nav class="nav" style="gap:28px">
+      <a href="index.html">TOP</a>
+      <a href="about.html">ABOUT</a>
+      <a href="work.html">WORK</a>
+      <a href="contact.html">CONTACT</a>
+    </nav>
+    <a class="footer-ig" href="https://www.instagram.com/ayumi_fujita_design/" target="_blank" rel="noopener noreferrer">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+        <rect x="3" y="3" width="18" height="18" rx="5" />
+        <circle cx="12" cy="12" r="4" />
+        <circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" />
+      </svg>
+      INSTAGRAM
+    </a>
+  </div>
+</footer>
+
+<script src="scripts/main.js"></script>
+<script src="scripts/news.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,110 @@
+/* ───────────── About page ───────────── */
+
+.bio {
+  display: grid; grid-template-columns: 7fr 5fr;
+  gap: clamp(24px, 6vw, 100px);
+  align-items: center;
+  margin-top: 48px;
+}
+.bio__copy p {
+  font-family: var(--serif-jp);
+  font-size: clamp(15px, 1.4vw, 17px);
+  letter-spacing: 0.06em;
+  line-height: 2.1;
+  margin: 0 0 22px;
+  color: var(--ink);
+}
+.bio__media .ph { aspect-ratio: 4/5; }
+
+/* Philosophy */
+.philosophy {
+  margin-top: 120px;
+  background: var(--bg-soft);
+  padding: 96px 0 100px;
+}
+.philosophy__grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: clamp(24px, 4vw, 56px);
+}
+.phil-card {
+  position: relative;
+  padding: 0 0 0 0;
+  border-top: 0.5px solid var(--line);
+  padding-top: 24px;
+}
+.phil-card__num {
+  font-family: var(--serif-display);
+  font-size: 28px; color: var(--accent);
+  display: block; margin-bottom: 8px;
+}
+.phil-card__en { display: block; margin-bottom: 14px; }
+.phil-card h3 {
+  font-family: var(--serif-jp);
+  font-size: 19px; font-weight: 400;
+  letter-spacing: 0.06em;
+  margin: 0 0 14px;
+  line-height: 1.6;
+}
+.phil-card p { font-size: 14px; letter-spacing: 0.06em; line-height: 1.9; color: var(--ink-soft); margin: 0; }
+
+/* Profile */
+.profile {
+  margin-top: 120px;
+  display: grid; grid-template-columns: 4fr 6fr;
+  gap: clamp(24px, 6vw, 80px);
+  align-items: center;
+}
+.profile__media .ph { aspect-ratio: 4/5; }
+.profile__table h2 {
+  font-size: clamp(36px, 5vw, 56px);
+  font-weight: 400; margin: 0 0 28px;
+}
+.profile__table dl { margin: 0; padding: 0; border-top: 0.5px solid var(--line); }
+.profile__row {
+  display: grid; grid-template-columns: 120px 1fr; gap: 24px;
+  padding: 18px 0;
+  border-bottom: 0.5px solid var(--line);
+  align-items: baseline;
+}
+.profile__row dt {
+  font-family: var(--serif-en);
+  font-size: 11px; letter-spacing: 0.32em;
+  color: var(--ink-mute);
+  text-transform: uppercase;
+}
+.profile__row dd { margin: 0; font-size: 15px; letter-spacing: 0.06em; line-height: 1.8; color: var(--ink); }
+.profile__row .muted { color: var(--ink-mute); font-size: 12px; }
+.ig-link { border-bottom: 1px solid var(--line); padding-bottom: 2px; }
+.ig-link:hover { color: var(--accent); border-color: var(--accent); }
+
+/* Timeline */
+.timeline { margin-top: 120px; }
+.timeline__list { list-style: none; padding: 0; margin: 0; border-top: 0.5px solid var(--line); }
+.timeline__list li {
+  display: grid; grid-template-columns: 100px 80px 1fr;
+  gap: 24px; align-items: center;
+  padding: 24px 0;
+  border-bottom: 0.5px solid var(--line);
+}
+.timeline__y { font-family: var(--serif-display); font-size: 22px; color: var(--ink); letter-spacing: 0.04em; }
+.timeline__bar { display: block; height: 1px; background: var(--ink-mute); }
+.timeline__list p { margin: 0; font-size: 15px; letter-spacing: 0.06em; line-height: 1.8; color: var(--ink); }
+
+@media (max-width: 760px) {
+  .bio { grid-template-columns: 1fr; }
+  .philosophy { padding: 56px 0 72px; margin-top: 80px; }
+  .philosophy__grid { grid-template-columns: 1fr; gap: 28px; }
+  .profile { grid-template-columns: 1fr; margin-top: 72px; }
+  .profile__row { grid-template-columns: 88px 1fr; }
+  .timeline__list li { grid-template-columns: 60px 1fr; }
+  .timeline__list .timeline__bar { display: none; }
+}
+
+/* About hero: no overlap between text and portrait */
+.about-hero .hero__inner {
+  grid-column: 1 / 7;
+}
+.about-hero .hero__media {
+  grid-column: 7 / 13;
+  margin-top: 40px;
+}
