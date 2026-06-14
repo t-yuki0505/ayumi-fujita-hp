@@ -66,8 +66,8 @@ button { font-family: inherit; }
 .en-display { font-family: var(--serif-display); letter-spacing: 0.04em; }
 .eyebrow {
   font-family: var(--serif-en);
-  font-size: 11px;
-  letter-spacing: 0.36em;
+  font-size: 12px;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--ink-mute);
   font-weight: 500;
@@ -136,8 +136,8 @@ button { font-family: inherit; }
 .nav { display: flex; align-items: center; gap: 36px; }
 .nav a {
   font-family: var(--serif-en);
-  font-size: 13px;
-  letter-spacing: 0.22em;
+  font-size: 14px;
+  letter-spacing: 0.14em;
   color: var(--ink-soft);
   position: relative;
   padding: 4px 0;
@@ -254,7 +254,14 @@ button { font-family: inherit; }
   height: 84px; padding: 0 var(--gutter);
   max-width: var(--maxw); margin: 0 auto;
 }
-.site-footer .nav a { font-size: 11px; letter-spacing: 0.28em; }
+.site-footer .nav a {
+  font-family: var(--serif-en);
+  font-size: 14px;
+  letter-spacing: 0.14em;
+  color: var(--ink-soft);
+  position: relative;
+  padding: 4px 0;
+}
 .footer-ig { display: flex; align-items: center; gap: 10px; color: var(--ink-soft); font-family: var(--serif-en); font-size: 12px; letter-spacing: 0.22em; }
 
 /* ─── CTA strip ──────────────────────────────── */

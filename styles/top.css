@@ -78,13 +78,6 @@
   color: var(--ink-soft);
   margin: 0;
 }
-.hero--editorial .hero__service-copy {
-  margin: -10px 0 0;
-  font-size: 13px;
-  line-height: 1.9;
-  letter-spacing: 0.08em;
-  color: var(--ink-mute);
-}
 .hero--editorial .hero__cta {
   display: inline-flex;
   align-items: center;
@@ -142,7 +135,7 @@
   display: flex; flex-direction: column; gap: 4px;
 }
 .work-card__meta .jp { font-family: var(--serif-jp); font-size: 14px; letter-spacing: 0.14em; }
-.work-card__meta .en { font-family: var(--serif-en); font-size: 11px; letter-spacing: 0.28em; color: var(--ink-mute); }
+.work-card__meta .en { font-family: var(--serif-en); font-size: 12px; letter-spacing: 0.16em; color: var(--ink-mute); }
 
 /* philosophy teaser */
 .phil-teaser {
@@ -211,7 +204,7 @@
   letter-spacing: 0.04em;
 }
 .svc-main { display: flex; flex-direction: column; gap: 6px; }
-.svc-en { font-size: 13px; letter-spacing: 0.32em; color: var(--ink-mute); }
+.svc-en { font-size: 13px; letter-spacing: 0.18em; color: var(--ink-mute); }
 .svc-jp {
   font-family: var(--serif-jp);
   font-size: clamp(20px, 2vw, 26px);
@@ -266,13 +259,6 @@
     font-size: 14px;
     line-height: 1.7;
   }
-.hero--editorial .hero__service-copy {
-  margin: -10px 0 0;
-  font-size: 13px;
-  line-height: 1.9;
-  letter-spacing: 0.08em;
-  color: var(--ink-mute);
-}
 .hero--editorial .hero__cta-line { width: 64px; }
 
   .intro { margin-top: 40px; }
