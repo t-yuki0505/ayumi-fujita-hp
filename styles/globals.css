@@ -92,13 +92,13 @@ button { font-family: inherit; }
 }
 .site-header__inner {
   display: flex; align-items: center; justify-content: space-between;
-  height: 72px; padding: 0 var(--gutter);
+  height: 82px; padding: 0 var(--gutter);
   max-width: var(--maxw); margin: 0 auto;
 }
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
   line-height: 1;
   font-family: var(--serif-display);
   font-size: 18px;
@@ -106,25 +106,29 @@ button { font-family: inherit; }
   color: var(--ink);
 }
 .brand__mark {
-  width: 38px;
+  width: 54px;
   height: auto;
   flex: 0 0 auto;
+  opacity: 1;
+  filter: saturate(1.22) contrast(1.12);
 }
 .brand__text-desktop {
   display: inline-flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 5px;
   font-family: var(--serif-en);
-  letter-spacing: 0.32em;
   text-transform: uppercase;
 }
-.brand__text-en {
-  font-size: 11px;
-  color: var(--ink-soft);
+.brand__text-name {
+  font-family: var(--serif-display);
+  font-size: 18px;
+  letter-spacing: 0.16em;
+  color: var(--ink);
 }
-.brand__text-est {
+.brand__text-meta {
   font-size: 10px;
-  color: var(--ink-mute);
+  letter-spacing: 0.22em;
+  color: var(--accent);
 }
 .brand__text-mobile {
   display: none;
@@ -457,8 +461,9 @@ button { font-family: inherit; }
   :root { --gutter: 22px; }
   .nav { display: none; }
   .menu-btn { display: inline-flex; }
+  .site-header__inner { height: 72px; }
   .brand { gap: 10px; }
-  .brand__mark { width: 32px; }
+  .brand__mark { width: 38px; }
   .brand__text-desktop { display: none; }
   .brand__text-mobile { display: inline-block; }
   .site-footer__inner { flex-direction: column; height: auto; gap: 14px; padding: 28px var(--gutter); }
