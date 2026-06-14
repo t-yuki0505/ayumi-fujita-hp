@@ -78,6 +78,13 @@
   color: var(--ink-soft);
   margin: 0;
 }
+.hero--editorial .hero__service-copy {
+  margin: -10px 0 0;
+  font-size: 13px;
+  line-height: 1.9;
+  letter-spacing: 0.08em;
+  color: var(--ink-mute);
+}
 .hero--editorial .hero__cta {
   display: inline-flex;
   align-items: center;
@@ -259,7 +266,14 @@
     font-size: 14px;
     line-height: 1.7;
   }
-  .hero--editorial .hero__cta-line { width: 64px; }
+.hero--editorial .hero__service-copy {
+  margin: -10px 0 0;
+  font-size: 13px;
+  line-height: 1.9;
+  letter-spacing: 0.08em;
+  color: var(--ink-mute);
+}
+.hero--editorial .hero__cta-line { width: 64px; }
 
   .intro { margin-top: 40px; }
   .intro__copy br { display: none; } /* スマホでは自然な折り返しに任せる */
