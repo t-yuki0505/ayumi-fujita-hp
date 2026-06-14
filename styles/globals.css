@@ -548,9 +548,9 @@ button { font-family: inherit; }
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 12px;
+    gap: 10px;
     min-height: auto;
-    padding: 24px var(--gutter) 28px;
+    padding: 18px var(--gutter) 22px;
     text-align: center;
   }
 
@@ -562,7 +562,7 @@ button { font-family: inherit; }
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 12px 22px !important;
+    gap: 10px 20px !important;
   }
 
   .site-footer .nav a {
@@ -572,7 +572,7 @@ button { font-family: inherit; }
 
   .footer-ig {
     display: inline-flex;
-    padding: 8px 15px;
+    padding: 7px 14px;
     border: 1px solid var(--line);
     border-radius: 999px;
     background: color-mix(in srgb, var(--bg) 72%, transparent);
@@ -584,4 +584,11 @@ button { font-family: inherit; }
     letter-spacing: 0.08em;
     line-height: 1.6;
   }
+}
+/* Mobile footer ordering: show Instagram before the nav links. */
+@media (max-width: 760px) {
+  .site-footer .brand { order: 1; }
+  .footer-ig { order: 2; }
+  .site-footer .nav { order: 3; }
+  .footer-copy { order: 4; }
 }
