@@ -277,7 +277,7 @@
   }
 
   .intro__copy p {
-    font-size: clamp(15px, 4vw, 16px);
+    font-size: clamp(15px, 4.25vw, 17px);
     line-height: 2;
     letter-spacing: 0;
     text-wrap: auto;
