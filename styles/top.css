@@ -273,14 +273,18 @@
 /* Mobile copy tuning */
 @media (max-width: 760px) {
   .intro__copy {
-    max-width: 19em;
+    max-width: 100%;
   }
 
   .intro__copy p {
-    font-size: 18px;
-    line-height: 1.95;
-    letter-spacing: 0.04em;
-    text-wrap: balance;
+    font-size: clamp(15px, 4vw, 16px);
+    line-height: 2;
+    letter-spacing: 0;
+    text-wrap: auto;
+  }
+
+  .intro__copy p:first-child br {
+    display: block;
   }
 
   .intro__copy .intro__sub {
