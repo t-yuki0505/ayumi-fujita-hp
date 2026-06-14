@@ -254,9 +254,15 @@ button { font-family: inherit; }
   background: var(--bg);
 }
 .site-footer__inner {
-  display: flex; align-items: center; justify-content: space-between;
-  height: 84px; padding: 0 var(--gutter);
-  max-width: var(--maxw); margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 14px 28px;
+  min-height: 104px;
+  padding: 22px var(--gutter);
+  max-width: var(--maxw);
+  margin: 0 auto;
 }
 .site-footer .nav a {
   font-family: var(--serif-en);
@@ -267,7 +273,15 @@ button { font-family: inherit; }
   padding: 4px 0;
 }
 .footer-ig { display: flex; align-items: center; gap: 10px; color: var(--ink-soft); font-family: var(--serif-en); font-size: 12px; letter-spacing: 0.22em; }
-
+.footer-copy {
+  flex-basis: 100%;
+  margin: 0;
+  text-align: center;
+  font-family: var(--serif-en);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: var(--ink-mute);
+}
 /* ─── CTA strip ──────────────────────────────── */
 .cta-strip {
   position: relative;
@@ -462,11 +476,23 @@ button { font-family: inherit; }
   .nav { display: none; }
   .menu-btn { display: inline-flex; }
   .site-header__inner { height: 72px; }
-  .brand { gap: 10px; }
+  .brand { gap: 9px; }
   .brand__mark { width: 38px; }
-  .brand__text-desktop { display: none; }
-  .brand__text-mobile { display: inline-block; }
-  .site-footer__inner { flex-direction: column; height: auto; gap: 14px; padding: 28px var(--gutter); }
+  .brand__text-desktop { display: inline-flex; gap: 4px; }
+  .brand__text-name { font-size: 13px; letter-spacing: 0.11em; }
+  .brand__text-meta { font-size: 8px; letter-spacing: 0.11em; }
+  .brand__text-mobile { display: none; }
+  .site-footer__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 14px 28px;
+  min-height: 104px;
+  padding: 22px var(--gutter);
+  max-width: var(--maxw);
+  margin: 0 auto;
+}
   .hero--pattern-b {
     display: flex;
     flex-direction: column;

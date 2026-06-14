@@ -24,6 +24,9 @@
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
-</urlset>
-
-
+  <url>
+    <loc>https://ayumi-fujita-hp-psi.vercel.app/news.html</loc>
+    <lastmod>2026-06-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url></urlset>
