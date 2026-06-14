@@ -535,3 +535,53 @@ button { font-family: inherit; }
   .section-h .meta { text-align: left; }
   .btn-pill { min-width: auto; width: 100%; }
 }
+/* Mobile footer: keep copyright and Instagram visible below the CTA. */
+@media (max-width: 760px) {
+  .site-footer {
+    margin-top: 0;
+    border-top: 0;
+    background: var(--bg-soft);
+  }
+
+  .site-footer__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    min-height: auto;
+    padding: 34px var(--gutter) 38px;
+    text-align: center;
+  }
+
+  .site-footer .brand {
+    font-size: 18px !important;
+  }
+
+  .site-footer .nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px 24px !important;
+  }
+
+  .site-footer .nav a {
+    font-size: 12px;
+    letter-spacing: 0.12em;
+  }
+
+  .footer-ig {
+    display: inline-flex;
+    padding: 10px 16px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--bg) 72%, transparent);
+  }
+
+  .footer-copy {
+    flex-basis: auto;
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    line-height: 1.6;
+  }
+}
