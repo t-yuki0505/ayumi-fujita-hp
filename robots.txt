@@ -1,6 +1,6 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ayumi-fujita-hp-psi.vercel.app/sitemap.xml
+Sitemap: https://ayumi-fujita.vercel.app/sitemap.xml
 
 
