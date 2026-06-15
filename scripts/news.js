@@ -28,26 +28,39 @@
 
   /* ── CSV パーサー ────────────────────────────── */
   function parseCSV(text) {
-    // 改行コード統一
-    var lines = text.replace(/\r\n/g, '\n').replace(/\r/g, '\n').split('\n');
-    return lines.map(function (line) {
-      var cols = [];
-      var cur  = '';
-      var inQ  = false;
-      for (var i = 0; i < line.length; i++) {
-        var ch = line[i];
-        if (ch === '"') {
-          if (inQ && line[i + 1] === '"') { cur += '"'; i++; }
-          else { inQ = !inQ; }
-        } else if (ch === ',' && !inQ) {
-          cols.push(cur); cur = '';
+    var rows = [];
+    var row = [];
+    var cur = '';
+    var inQ = false;
+
+    for (var i = 0; i < text.length; i++) {
+      var ch = text[i];
+      var next = text[i + 1];
+
+      if (ch === '"') {
+        if (inQ && next === '"') {
+          cur += '"';
+          i++;
         } else {
-          cur += ch;
+          inQ = !inQ;
         }
+      } else if (ch === ',' && !inQ) {
+        row.push(cur);
+        cur = '';
+      } else if ((ch === '\n' || ch === '\r') && !inQ) {
+        if (ch === '\r' && next === '\n') i++;
+        row.push(cur);
+        if (row.some(function (col) { return col !== ''; })) rows.push(row);
+        row = [];
+        cur = '';
+      } else {
+        cur += ch;
       }
-      cols.push(cur);
-      return cols;
-    });
+    }
+
+    row.push(cur);
+    if (row.some(function (col) { return col !== ''; })) rows.push(row);
+    return rows;
   }
 
   /* ── Google Drive URL → 直接表示URLに変換 ───── */
